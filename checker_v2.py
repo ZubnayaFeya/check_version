@@ -17,16 +17,18 @@ def prepare(namefile, newfile):
     f.close()
     fn.close()
 
+# функция считает количество строк в файле
 def check_len(file):
     with open(file) as f:
         test = f.read()
         line = test.count('\n') + 1
         return line
 
+
 def check(old, new):
     fold = open(old)
     fnew = open(new)
-    log = open('check.log', 'w', encoding='utf-8')
+    log = open('check.log', 'a', encoding='utf-8')
     point = 1
     while True:
         old_str = fold.readline()
