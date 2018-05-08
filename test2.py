@@ -31,3 +31,17 @@ def file_hash(filename):
     for b in iter(lambda : f.read(128*1024), b''):
       h.update(b)
   return h.hexdigest()
+
+
+#
+# пример названия лога
+# [FAIL][2018-05-08_15-12-40]-[Test_issues-162_5]-[Part_1].log
+[FAIL][2018-05-08_15-12-40]-[InstallTest].log
+
+'/home/tester/share/trade_system/testing/testresults/{0}/[{1}][{2}]-[InstallTest].log'.format(service_name, res, ts)
+
+# import time, datetime
+# ts = datetime.datetime.now().strftime('%Y-%m-%d_%H-%M-%S')
+
+# res - это совокупный результат всех проверок
+# вместо self.name - имя проверяемого сервиса
