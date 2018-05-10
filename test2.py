@@ -1,4 +1,4 @@
-import pickle, sys
+import pickle, sys, os
 
 def dump_all_data():
     data = {
@@ -38,6 +38,7 @@ def file_hash(filename):
 # [FAIL][2018-05-08_15-12-40]-[Test_issues-162_5]-[Part_1].log
 [FAIL][2018-05-08_15-12-40]-[InstallTest].log
 
+
 '/home/tester/share/trade_system/testing/testresults/{0}/[{1}][{2}]-[InstallTest].log'.format(service_name, res, ts)
 
 # import time, datetime
@@ -45,3 +46,19 @@ def file_hash(filename):
 
 # res - это совокупный результат всех проверок
 # вместо self.name - имя проверяемого сервиса
+
+test_dict = {
+    'a': 1,
+    'b': 2,
+    'c': 3
+}
+for key, value in test_dict.items():
+    print(key, value)
+
+def gen_etalon(service, path):
+    full_path = '{}{}'.format(path, service)
+    tree = os.walk(full_path)
+    for i in tree:
+
+
+    return list_file
