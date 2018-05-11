@@ -1,0 +1,7 @@
+#vim: sts=2 sw=2 et
+
+container.include:
+  - yaml:///etc/ce/container.yaml
+  - yaml://setup.yaml
+  - yaml://links.yaml
+  - yaml://app-risk.yaml

@@ -1,4 +1,4 @@
-import pickle, sys, os
+import pickle, sys, os, os.path
 
 def dump_all_data():
     data = {
@@ -61,4 +61,26 @@ def gen_etalon(service, path):
     for i in tree:
 
 
+    return list_file
+
+def gen_etalon(service, path):
+    list_file = []
+    full_path = '{}{}'.format(path, service)
+    for i in os.listdir(full_path):
+        if isfile(i):
+            list_file.append(i)
+        elif isdir(i):
+
+    return list_file
+
+def indirs(dir):
+    list_file = []
+    for i in os.listdir(dir):
+        if os.path.isdir(i):
+            path_dir = '{}/{}'.format(dir, i)
+            files = indirs(path_dir)
+            for j in files:
+                list_file.append(j)
+        elif os.path.isfile(i):
+            list_file.append('{}/{}'.format(dir, i))
     return list_file

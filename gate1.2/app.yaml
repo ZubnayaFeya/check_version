@@ -1,0 +1,16 @@
+#vim: sts=2 sw=2 et
+
+container.id: gate1-v22-risk
+source_id: 132
+version: 22
+
+container.ftl.disable: no
+
+dump: yes
+dump_logic: yes
+dump.high: yes
+dump_mode: hex
+
+logger.levels:
+  ce.link: DEBUG
+  ce.link.lvlink: WARNING
